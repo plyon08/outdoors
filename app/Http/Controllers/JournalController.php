@@ -25,7 +25,7 @@ class JournalController extends Controller
      */
     public function index()
     {
-        $journal = Journal::where('user_id', \Auth::user()->id)->orderBy('place_name', 'asc')->paginate(20);
+        $journal = Journal::where('user_id', auth()->id())->orderBy('place_name', 'asc')->paginate(20);
 
         return view('index', compact('journal'));
     }
@@ -50,13 +50,15 @@ class JournalController extends Controller
     {
         $this->validate(request(), [
             'place_name' => 'required',
+            'category' => 'required',
             'content' => 'required'
         ]);
 
         $entry = new Journal;
 
-        $entry->user_id = \Auth::user()->id;
+        $entry->user_id = auth()->id();
         $entry->place_name = request('place_name');
+        $entry->category = request('category');
         $entry->content = request('content');
 
         $entry->save();
@@ -99,11 +101,13 @@ class JournalController extends Controller
     {
         $this->validate(request(), [
             'place_name' => 'required',
+            'category' => 'required',
             'content' => 'required'
         ]);
 
         $journal = Journal::find($journal->id);
         $journal->place_name = request('place_name');
+        $journal->category = request('category');
         $journal->content = request('content');
 
         $journal->save();

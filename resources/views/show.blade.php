@@ -7,10 +7,24 @@
                 <div class="card mb-3">
                     <div class="card-header">
                         <h4>{{ $journal->place_name }}</h4>
-                        <h6>{{ $journal->created_at->toFormattedDateString() }}</h6>
+                        <h6>{{ $journal->updated_at->toFormattedDateString() }}</h6>
                     </div>
                     
                     <div class="card-body">
+                        <p><strong>Category: </strong>
+                            @switch ($journal->category)
+                                @case('lake')
+                                @case('river')
+                                @case('state forest')
+                                    {{ ucfirst($journal->category) }}
+                                    @break
+                                @case('sna')
+                                @case('wma')
+                                    {{ strtoupper($journal->category) }}
+                                    @break
+                            @endswitch
+                        </p>
+                        <hr>
                         <p>{!! nl2br(e($journal->content)) !!}</p>
                     </div>
                 </div>

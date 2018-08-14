@@ -17,6 +17,7 @@ class CreateJournalsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->text('place_name');
+            $table->text('category');
             $table->longtext('content');
             $table->timestamps();
         });
