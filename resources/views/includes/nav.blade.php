@@ -1,16 +1,23 @@
-<nav class="navbar navbar-collapse navbar-light navbar-laravel mb-3 fixed-top">
+<nav class="navbar navbar-collapse navbar-light navbar-laravel fixed-top links">
     <div class="container">
+    @auth
+        <div>
+            <a href="{{ route('profile') }}">Welcome, {{ auth()->user()->name }}</a>
+        </div>
+    @else
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Outdoor Journal') }}
         </a>
+    @endauth
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         @if (Route::has('login'))
-        <div class="collapse navbar-collapse links" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav text-right">
-                @auth
+            @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profile') }}">Profile</a>
                 </li>
@@ -31,14 +38,14 @@
                         @csrf
                     </form>
                 </li>
-                @else
+            @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">Register</a>
                 </li>
-                @endauth
+            @endauth
             </ul>
         </div>
         @endif
