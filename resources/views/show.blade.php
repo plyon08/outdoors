@@ -30,17 +30,22 @@
                 </div>
             </div>
         </div>
-        <div class='row justify-content-md-start'>
+        <div class='row justify-content-md-start mb-3'>
             <div class='col col-md-2 col-lg-1'>
-                <div class='center'><a class='btn btn-primary' href="{{ route('edit',$journal->id) }}">Update</a></div>
+                <div class='text-center'><a class='btn btn-outline-primary' href="{{ route('edit',$journal->id) }}">Update</a></div>
             </div>
             <div class='col col-md-2 col-lg-1'>
-                <div class='center'>
+                <div class='text-center'>
                 <form method='POST' action="{{ route('destroy',$journal->id) }}">
                     @method('DELETE')
                     @csrf
-                    <button type='submit' class='btn btn-danger'>Delete</button>
+                    <button type='submit' class='btn btn-outline-danger'>Delete</button>
                 </form>
+                </div>
+            </div>
+            <div class='col col-md-2 col-lg-1'>
+                <div class='text-center'>
+                    <a class='btn btn-outline-warning' href='{{ url('/journal') }}'>Journal</a>
                 </div>
             </div>
         </div>

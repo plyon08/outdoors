@@ -10538,6 +10538,22 @@ body {
   font-size: 1em;
 }
 
+.btn-outline-warning {
+  color: #f6993f !important;
+  border-color: #f6993f !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:active {
+  color: white !important;
+  background-color: #f6993f !important;
+}
+
+.btn-outline-warning:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(246, 153, 63, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(246, 153, 63, 0.5) !important;
+}
+
 #alert {
   position: fixed;
   bottom: 30px;
