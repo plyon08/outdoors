@@ -16,22 +16,23 @@
                     <div class="form-group">
                         <label for="name-of-place">Name of Place</label>
                         <input type="text" class="form-control" id="name-of-place" aria-describedby="name-of-place-help" name="place_name" >
-                        <small id="name-of-place-help" class="form-text text-muted">Type of the name of the place/location.</small>
+                        <small id="name-of-place-help" class="form-text">Type of the name of the place/location.</small>
                     </div>
+                    <label>Category</label>
                     <div class="form-group btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-outline-info">
+                        <label class="btn btn-info">
                             <input type="radio" name="category" value='lake' autocomplete="off"> Lake
                         </label>
-                        <label class="btn btn-outline-info">
+                        <label class="btn btn-info">
                             <input type="radio" name="category" value='river' autocomplete="off"> River
                         </label>
-                        <label class="btn btn-outline-info">
+                        <label class="btn btn-info">
                             <input type="radio" name="category" value='sna' autocomplete="off"> SNA
                         </label>
-                        <label class="btn btn-outline-info">
+                        <label class="btn btn-info">
                             <input type="radio" name="category" value='state forest' autocomplete="off"> State Forest
                         </label>
-                        <label class="btn btn-outline-info">
+                        <label class="btn btn-info">
                             <input type="radio" name="category" value='wma' autocomplete="off"> WMA
                         </label>
                     </div>
@@ -42,7 +43,7 @@
                     <div class='row justify-content-md-start mb-3'>
                             <div class='col col-md-2 col-lg-1'>
                                 <div class='text-center'>
-                                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                    <button type="submit" class="btn btn-outline-success">Submit</button>
                                 </div>
                             </div>
                             <div class='col col-md-2 col-lg-1'>

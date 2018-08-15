@@ -17,22 +17,23 @@
                     <div class="form-group">
                         <label for="name-of-place">Name of Place</label>
                         <input type="text" class="form-control" id="name-of-place" aria-describedby="name-of-place-help" name="place_name" value="{{ $journal->place_name }}" >
-                        <small id="name-of-place-help" class="form-text text-muted">Type of the name of the place/location.</small>
+                        <small id="name-of-place-help" class="form-text">Type of the name of the place/location.</small>
                     </div>
+                    <label>Category</label>
                     <div class="form-group btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-outline-info @if ('lake' === $journal->category) active @endif">
+                        <label class="btn btn-info @if ('lake' === $journal->category) active @endif">
                             <input type="radio" name="category" value='lake' autocomplete="off" @if ('lake' === $journal->category) checked @endif> Lake
                         </label>
-                        <label class="btn btn-outline-info @if ('river' === $journal->category) active @endif">
+                        <label class="btn btn-info @if ('river' === $journal->category) active @endif">
                             <input type="radio" name="category" value='river' autocomplete="off" @if ('river' === $journal->category) checked @endif> River
                         </label>
-                        <label class="btn btn-outline-info @if ('sna' === $journal->category) active @endif">
+                        <label class="btn btn-info @if ('sna' === $journal->category) active @endif">
                             <input type="radio" name="category" value='sna' autocomplete="off" @if ('sna' === $journal->category) checked @endif> SNA
                         </label>
-                        <label class="btn btn-outline-info @if ('state forest' === $journal->category) active @endif">
+                        <label class="btn btn-info @if ('state forest' === $journal->category) active @endif">
                             <input type="radio" name="category" value='state forest' autocomplete="off" @if ('state forest' === $journal->category) checked @endif> State Forest
                         </label>
-                        <label class="btn btn-outline-info @if ('wma' === $journal->category) active @endif">
+                        <label class="btn btn-info @if ('wma' === $journal->category) active @endif">
                             <input type="radio" name="category" value='wma' autocomplete="off" @if ('wma' === $journal->category) checked @endif> WMA
                         </label>
                     </div>
@@ -43,7 +44,7 @@
                     <div class='row justify-content-md-start mb-3'>
                         <div class='col col-md-2 col-lg-1'>
                             <div class='text-center'>
-                                <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                <button type="submit" class="btn btn-outline-success">Submit</button>
                             </div>
                         </div>
                         <div class='col col-md-2 col-lg-1'>

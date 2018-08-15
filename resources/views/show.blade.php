@@ -4,14 +4,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <p class='place-name'>{{ $journal->place_name }}</p>
-                        <p class='updated-date'>{{ $journal->updated_at->toFormattedDateString() }}</p>
-                    </div>
-                    
-                    <div class="card-body">
-                        <p><strong>Category: </strong>
+                <div class="mb-5">
+                    <p class='place-name-show'>{{ $journal->place_name }}</p>
+                    <hr>
+                    <div>
+                        <p class='updated-date'><strong>Updated:</strong><br/>{{ $journal->updated_at->toFormattedDateString() }}</p>
+                        <p><strong>Category:</strong><br/>
                             @switch ($journal->category)
                                 @case('lake')
                                 @case('river')
@@ -32,7 +30,7 @@
         </div>
         <div class='row justify-content-md-start mb-3'>
             <div class='col col-md-2 col-lg-1'>
-                <div class='text-center'><a class='btn btn-outline-primary' href="{{ route('edit',$journal->id) }}">Update</a></div>
+                <div class='text-center'><a class='btn btn-outline-success' href="{{ route('edit',$journal->id) }}">Update</a></div>
             </div>
             <div class='col col-md-2 col-lg-1'>
                 <div class='text-center'>
