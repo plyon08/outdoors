@@ -45,7 +45,7 @@
             </div>
             <div class='col col-md-2 col-lg-1'>
                 <div class='text-center'>
-                    <a class='btn btn-outline-warning' href='{{ url('/journal') }}'>Journal</a>
+                    <a class='btn btn-outline-warning' href='{{ route('journal') }}'>Journal</a>
                 </div>
             </div>
         </div>
