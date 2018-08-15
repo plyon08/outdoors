@@ -19,19 +19,19 @@
                         <small id="name-of-place-help" class="form-text text-muted">Type of the name of the place/location.</small>
                     </div>
                     <div class="form-group btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary">
+                        <label class="btn btn-outline-info">
                             <input type="radio" name="category" value='lake' autocomplete="off"> Lake
                         </label>
-                        <label class="btn btn-secondary">
+                        <label class="btn btn-outline-info">
                             <input type="radio" name="category" value='river' autocomplete="off"> River
                         </label>
-                        <label class="btn btn-secondary">
+                        <label class="btn btn-outline-info">
                             <input type="radio" name="category" value='sna' autocomplete="off"> SNA
                         </label>
-                        <label class="btn btn-secondary">
+                        <label class="btn btn-outline-info">
                             <input type="radio" name="category" value='state forest' autocomplete="off"> State Forest
                         </label>
-                        <label class="btn btn-secondary">
+                        <label class="btn btn-outline-info">
                             <input type="radio" name="category" value='wma' autocomplete="off"> WMA
                         </label>
                     </div>
@@ -39,7 +39,18 @@
                         <label for="content-details">Details</label>
                         <textarea rows='10' class="form-control" id="content-details" name="content" ></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class='row justify-content-md-start mb-3'>
+                            <div class='col col-md-2 col-lg-1'>
+                                <div class='text-center'>
+                                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                </div>
+                            </div>
+                            <div class='col col-md-2 col-lg-1'>
+                                <div class='text-center'>
+                                    <a class='btn btn-outline-warning' href='{{ route('journal') }}'>Cancel</a>
+                                </div>
+                            </div>
+                        </div>
                 </form>
             </div>
         </div>
