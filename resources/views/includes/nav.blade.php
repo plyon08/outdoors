@@ -7,14 +7,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        @if (Route::has('login'))
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-
-            </ul>
-
-            <!-- Right Side Of Navbar -->
             <ul class="navbar-nav text-right">
+                @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('profile') }}">Profile</a>
                 </li>
@@ -35,7 +31,16 @@
                         @csrf
                     </form>
                 </li>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                </li>
+                @endauth
             </ul>
         </div>
+        @endif
     </div>
 </nav>
