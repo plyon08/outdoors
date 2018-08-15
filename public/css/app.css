@@ -10497,15 +10497,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 85vh;
+  height: 100vh;
 }
 
 .content {
-  text-align: center;
+  background-image: url("/images/welcome-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -80px;
 }
 
 .title {
   font-size: 84px;
+  color: white;
 }
 
 .links a {
