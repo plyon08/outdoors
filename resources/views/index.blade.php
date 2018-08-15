@@ -6,9 +6,10 @@
             <div class="col-12">
 
             @foreach ($journal as $j)
-                <div class="card mb-3">
+                <div class="mb-3 place-name">
                     {{-- <div class="card-header"> --}}
-                        <a href="{{ route('show',$j->id) }}"><h4>{{ $j->place_name }}</h4></a>
+                        <a href="{{ route('show',$j->id) }}">{{ $j->place_name }}</a>
+                        <hr>
                     {{-- </div> --}}
                 </div>
             @endforeach

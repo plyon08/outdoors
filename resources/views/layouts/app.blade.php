@@ -10,8 +10,10 @@
 
         @include('includes.success')
 
-        <main class="py-4">
+        <main class='main-content'>
+
             @yield('content')
+        
         </main>
     </div>
 </body>

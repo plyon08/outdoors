@@ -6,8 +6,8 @@
             <div class="col-12">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h4>{{ $journal->place_name }}</h4>
-                        <h6>{{ $journal->updated_at->toFormattedDateString() }}</h6>
+                        <p class='place-name'>{{ $journal->place_name }}</p>
+                        <p class='updated-date'>{{ $journal->updated_at->toFormattedDateString() }}</p>
                     </div>
                     
                     <div class="card-body">

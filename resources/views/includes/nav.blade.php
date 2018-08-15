@@ -1,4 +1,4 @@
-<nav class="navbar navbar-collapse navbar-light navbar-laravel">
+<nav class="navbar navbar-collapse navbar-light navbar-laravel mb-3 fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Outdoor Journal') }}
@@ -8,7 +8,7 @@
         </button>
 
         @if (Route::has('login'))
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse links" id="navbarSupportedContent">
             <ul class="navbar-nav text-right">
                 @auth
                 <li class="nav-item">
