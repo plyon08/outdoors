@@ -3,8 +3,8 @@
 @section('content')
     <div class="content">
         <div class="flex-center my-auto">
-            <div class="title">
-                Enjoy the Outdoors!
+            <div class="title text-center">
+                Enjoy<br/>The<br/>Outdoors!
             </div>
         </div>
     </div>
