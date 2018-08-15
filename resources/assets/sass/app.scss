@@ -1,7 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css?family=Raleway:100,600');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,600,700');
 
 // Variables
 @import 'variables';
@@ -13,8 +12,9 @@ html, body
 {
     background-color: $white;
     color: $dark-gray;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
+    font-family: $font;
+    font-weight: 500px;
+    letter-spacing: 1px;
     margin: 0;
 }
 
@@ -46,7 +46,7 @@ html, body
 {
     color: $gray;
     padding: 1px 25px;
-    font-weight: 600;
+    font-weight: 700px;
     letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -60,7 +60,7 @@ html, body
 .place-name, .place-name a
 {
     font-size: 1.2em;
-    font-weight: 600px;
+    font-weight: 700px;
     text-decoration: none;
 }
 
