@@ -10478,8 +10478,8 @@ body {
   font-weight: 500px;
   letter-spacing: 1px;
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.7)), to(rgba(50, 50, 50, 0.7))), url("/images/welcome-bg.jpg");
-  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.7)), url("/images/welcome-bg.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.7)), to(rgba(50, 50, 50, 0.7))), url("/../images/welcome-bg.jpg");
+  background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.7)), url("/../images/welcome-bg.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
